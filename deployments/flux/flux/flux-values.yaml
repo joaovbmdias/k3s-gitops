@@ -4,7 +4,7 @@ helmOperator:
 # @CHANGEME - Update url to your public repo URL
 #
 git:
-  url: "git@github.com:joaovbmdias/home-pi-cluster.git"
+  url: "git@github.com:joaovbmdias/k3s-gitops.git"
   branch: master
   path: deployments
 image:
