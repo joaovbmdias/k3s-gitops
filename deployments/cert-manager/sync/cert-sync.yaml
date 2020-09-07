@@ -70,7 +70,7 @@ spec:
             done
           done
       - name: secret-watch
-        image: boxboat/kubectl:latest
+        image: raspbernetes/kubectl:latest
         command:
         - sh
         - -c
