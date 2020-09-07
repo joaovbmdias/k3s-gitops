@@ -23,7 +23,7 @@ spec:
     # @CHANGEME - Update server and path to your NFS server
     #
     nfs:
-      server: "192.168.1.202"
+      server: "192.168.1.250"
       path: ""
       mountOptions:
         - tcp
