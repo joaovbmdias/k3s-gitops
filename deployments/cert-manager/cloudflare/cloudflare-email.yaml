@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: cloudflare-email
+  namespace: cert-manager
+spec:
+  encryptedData:
+    email: AgBihHHaaOGb5oHgX32Z9lpf37YN+9FJWItY6Vvwk/ooWsc+z3XMZAzXeKHMV2nAybrdWRUylfbaXQ1e6EhFpyDdqq2axSVg0PLHra0DyV6Tge3JyvObxUhUi85ZOJp4Qnyq7m6KuXcSGxXfbYIQHVPXbQ9U9RONdaDZ5UJswDB7EIkfkZ64n0O6LyCCUJUL3OaaHwdXXsXjhiMHng0xNlTnP1Sfaq8036Um6c55RQr0N92YhNZPLRfx9EtA+DWwhF1rgzFgg7bBbgUQ9BRb5fFEvaRIZGVQYNrSWaw4iamNKjXWv5dD7hN1yl2ZCV602Uc8OUnS8iFwI5aN86b3uQ06NKlTajDgE9CsDklmONTsKGduTAJNNqFzte4mlC9NLjWggQe8nSrFmgeD7qR3grv4p9uOBw/dwPYI7GHFRZT6gY0D1Wd+QMPKzVTCjdKm4VbmNbekr+5BVifeFQrEURZ7AUx5Gxl23R4h/FjhoILsI9PT8IPdsoWelRsHnnR876My/eMy+YOrPmMQzpb0RPRtYL1CDXg8qhbNYy7Pkd3wrwptSnyW0qhqmMH8ok/AIWHRTW/XZTo/Tr57ES0vdw+sM9opNPndwU11zcHB9xlryHVi2bBuJWfXcvH0BZrZRqgmgCiKulFp1PfJU7fsfsWAdL8C9+isY30aZxvtRyBcmcCCbtDVtU+zry6r1rqsdA3p/2aI/d2PKrkHlDsRVHut/M0/ben5Acp0IbB3yf/ZHAY=
+  template:
+    metadata:
+      creationTimestamp: null
+      name: cloudflare-email
+      namespace: cert-manager
+status: {}
