@@ -41,12 +41,12 @@ spec:
             - name: OPENVPN_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: openvpnuser
+                  name: ovpnuser
                   key: username
             - name: OPENVPN_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: openvpnuser
+                  name: ovpnuser
                   key: password
             - name: NORDVPN_PROTOCOL
               value: TCP
