@@ -13,4 +13,5 @@ spec:
       creationTimestamp: null
       name: openvpn
       namespace: media
+status: {}
 

@@ -13,4 +13,5 @@ spec:
       creationTimestamp: null
       name: transmission
       namespace: media
+status: {}
 
