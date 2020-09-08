@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: transmissionuser
+  namespace: media
+spec:
+  encryptedData:
+    transmissionuser: AgBnBDfGyu/RfiA1UUuFp86OpA7krnlRVqtEqBlwnn/k4clVA5L/QQOR/l6tco3K9CVXd3zqehov6vud/1FZ6AXntFkZFt7/eIs+a5cfNm1WFvhxD2I2+VEBWysCZhEfQE4tS0o4wSBfEQsN3DWxoA8Uv8jQtWA5oU2Jz0ySIyj461pefTXe05jwZdunPkg6qQ489eMU0vxzZh0ekrihT6osXOGRkkv/zuPaqJLS6yT9sINmuOQ2bLw3+GAc8oNLGcgLrCNH6VQFXXWKsDSkobejlvfsyP1qAl61iqNlGSh0PBsZM2Xn51iPjA6KxAlkj7mIlyK/XWMbeoRZt+GO5TfDCH+pMGdv+pOYbVKKiTNYN0XI57NUfUGAhrmOaV5EwQuiMCkYbyMz2fQ2QER+Am5xCvo2AWiPv2019+CvetsJ13Hb0jhyGbCL42ZhoGEcSPsTPcP4cGbD1NelJDeLId6gonIlxSo9Ysi9BE4FJLM2NgbY8p9UfjqMoqOYbYpDPL//OpkcxfbM5HHm4eID0g1/0teZ1jHTzAvFfdkF3b3ooxSINRiO4NaRpEPcvTYFyX6OZhBoEwjTRWKlC3PX/TiyN1LDulxslhxrKEhComrnoTjpe5Oco0HDqpYMcNwtNIhk4sQmUr9iPJsP3q5BEWQcX6BFOHXkrgWVzj5FVYB9Tc6YxIbybJx2QLK7T/hm7NU/SrzIKFbt9O4A/SFo94iB88p5a87TSXGJHP5dYcZXcklhxxUDK8+yQFJ0S8WsP+c9HbaIKgRCCVVjGnXUFQmKm/N2FgTK5q3CUImbQXbmlu83H2nAs+C480P6
+  template:
+    metadata:
+      creationTimestamp: null
+      name: transmissionuser
+      namespace: media
+
