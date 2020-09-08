@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sonarr
+  namespace: media
 spec:
   selector:
     matchLabels:
@@ -67,6 +68,7 @@ metadata:
   labels:
     app: sonarr
   name: sonarr
+  namespace: media
 spec:
   ports:
   - port: 80
