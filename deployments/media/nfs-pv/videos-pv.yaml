@@ -1,39 +1,28 @@
-# ---
-# apiVersion: v1
-# kind: PersistentVolume
-# metadata:
-#   name: nfs-videos-pvc
-#   namespace: media
-# spec:
-#   storageClassName: data
-#   capacity:
-#     storage: 3Gi
-#   accessModes:
-#     - ReadWriteMany
-#   persistentVolumeReclaimPolicy: Retain
-#   #
-#   # @CHANGEME - Update server and path to your NFS server
-#   #
-#   nfs:
-#     server: 192.168.1.202
-#     path: "/Shared Videos"
-#   mountOptions:
-#     - tcp
-#     - intr
-#     - hard
-#     - noatime
-#     - nodiratime
-#     - rsize=32768
-#     - wsize=32768
-# ---
-# apiVersion: v1
-# kind: PersistentVolumeClaim
-# metadata:
-#   name: nfs-videos-pvc
-# spec:
-#   accessModes:
-#     - ReadWriteMany
-#   storageClassName: data
-#   resources:
-#     requests:
-#       storage: 3Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-videos-pv
+  namespace: media
+spec:
+  storageClassName: data
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/nfsshare/Shared Videos"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-videos-pvc
+  namespace: media
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: data
+  resources:
+    requests:
+      storage: 3Gi
