@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-music-pv
+  name: media-music-pv
   namespace: media
 spec:
   storageClassName: data
@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs-music-pvc
+  name: media-music-pvc
   namespace: media
 spec:
   accessModes:

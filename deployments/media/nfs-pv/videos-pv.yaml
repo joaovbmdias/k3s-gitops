@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-videos-pv
+  name: media-videos-pv
   namespace: media
 spec:
   storageClassName: data
@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nfs-videos-pvc
+  name: media-videos-pvc
   namespace: media
 spec:
   accessModes:
