@@ -1,0 +1,57 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: "media"
+  name: "media-ingress"
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  tls:
+  - hosts:
+    - media.192.168.1.100.nip.io
+    secretName: "media.192.168.1.100.nip.io-prod-tls"
+  rules:
+  - host: "transmission.192.168.1.100.nip.io"
+    http:
+      paths:
+        - backend:
+            serviceName: "transmission"
+            servicePort: 80
+          path: ""
+  - host: "jackett.192.168.1.100.nip.io"
+    http:
+      paths:
+        - backend:
+            serviceName: "jackett"
+            servicePort: 80
+          path: ""
+  - host: "sonarr.192.168.1.100.nip.io"
+    http:
+      paths:
+        - backend:
+            serviceName: "sonarr"
+            servicePort: 80
+          path: ""
+  - host: "radarr.192.168.1.100.nip.io"
+    http:
+      paths:
+        - backend:
+            serviceName: "radarr"
+            servicePort: 80
+          path: ""
+  - host: "jellyfin.192.168.1.100.nip.io"
+    http:
+      paths:
+        - backend:
+            serviceName: "jellyfin"
+            servicePort: 80
+          path: ""
+  - host: "lidarr.192.168.1.100.nip.io"
+    http:
+      paths:
+        - backend:
+            serviceName: "lidarr"
+            servicePort: 80
+          path: ""
