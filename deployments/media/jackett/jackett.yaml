@@ -15,9 +15,9 @@ spec:
         app: jackett
     spec:
       volumes:
-        - name: media-configurations
+        - name: media-data
           persistentVolumeClaim:
-            claimName: media-configurations
+            claimName: media-data-pvc
         - name: dev-tun
           hostPath:
             path: /dev/net/tun
@@ -58,7 +58,7 @@ spec:
               cpu: 100m
               memory: 128Mi
           volumeMounts:
-            - name: media-configurations
+            - name: media-data
               mountPath: /config
               subPath: jackett
           terminationMessagePath: /dev/termination-log
