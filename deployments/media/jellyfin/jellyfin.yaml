@@ -58,6 +58,8 @@ spec:
       - name: media-data
         persistentVolumeClaim:
           claimName: media-jellyfin-pvc
+      nodeSelector:
+        nodepower: yes
 ---
 apiVersion: v1
 kind: Service
