@@ -114,6 +114,7 @@ metadata:
   labels:
     app: transmission
   name: transmission
+  namespace: media
 spec:
   ports:
   - port: 80
