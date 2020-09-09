@@ -1,0 +1,91 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: jackett
+  namespace: media
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jackett
+  template:
+    metadata:
+      labels:
+        app: jackett
+    spec:
+      volumes:
+        - name: media-configurations
+          persistentVolumeClaim:
+            claimName: media-configurations
+        - name: dev-tun
+          hostPath:
+            path: /dev/net/tun
+            type: ''
+      containers:
+        - name: jackett
+          image: 'gjeanmart/jackettvpn:arm-latest'
+          ports:
+            - name: http
+              containerPort: 9117
+              protocol: TCP
+          env:
+            - name: VPN_ENABLED
+              value: 'yes'
+            - name: VPN_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: openvpn
+                  key: username
+            - name: VPN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: openvpn
+                  key: password
+            - name: LAN_NETWORK
+              value: 192.168.0.0/24
+            - name: CREATE_TUN_DEVICE
+              value: 'true'
+            - name: PUID
+              value: '1000'
+            - name: PGID
+              value: '1000'
+          resources:
+            limits:
+              cpu: 500m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+          volumeMounts:
+            - name: media-configurations
+              mountPath: /config
+              subPath: jackett
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: jackett
+  name: jackett
+  namespace: media
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9117
+  selector:
+    app: jackett
+  type: ClusterIP
