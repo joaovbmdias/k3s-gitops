@@ -47,14 +47,14 @@ spec:
         - mountPath: /data/media
           name: media-videos
           readOnly: True
-        - mountPath: /config
-          subPath: "jellyfin"
-          name: media-data
+        # - mountPath: /config
+        #   subPath: "jellyfin"
+        #   name: media-data
       restartPolicy: Always
       volumes:
-      - name: media-videos
-        persistentVolumeClaim:
-          claimName: media-videos-pvc
+      # - name: media-videos
+      #   persistentVolumeClaim:
+      #     claimName: media-videos-pvc
       - name: media-data
         persistentVolumeClaim:
           claimName: media-data-pvc
