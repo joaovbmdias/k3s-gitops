@@ -57,7 +57,7 @@ spec:
           claimName: media-videos-pvc
       - name: media-data
         persistentVolumeClaim:
-          claimName: media-data-pvc
+          claimName: media-jellyfin-pvc
 ---
 apiVersion: v1
 kind: Service
