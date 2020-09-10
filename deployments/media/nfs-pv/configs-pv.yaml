@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: media-data-pv
+  name: media-config-pv
   namespace: media
 spec:
   storageClassName: data
@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: media-data-pvc
+  name: media-config-pvc
   namespace: media
 spec:
   accessModes:
