@@ -2,22 +2,22 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: media-jellyfin-pv
+  name: media-pictures-pv
   namespace: media
 spec:
   storageClassName: data
   capacity:
-    storage: 50Gi
+    storage: 2900Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/mnt/jellyfin"
+    path: "/mnt/pictures"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: media-jellyfin-pvc
+  name: media-pictures-pvc
   namespace: media
 spec:
   accessModes:
@@ -25,4 +25,4 @@ spec:
   storageClassName: data
   resources:
     requests:
-      storage: 50Gi
+      storage: 2900Gi

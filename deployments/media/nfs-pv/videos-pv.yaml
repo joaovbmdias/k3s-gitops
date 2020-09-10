@@ -12,7 +12,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/mnt/nfsshare/Shared Videos"
+    path: "/mnt/videos"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
