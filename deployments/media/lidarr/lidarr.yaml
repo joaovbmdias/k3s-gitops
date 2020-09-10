@@ -41,7 +41,7 @@ spec:
         - containerPort: 8686
           protocol: TCP
         volumeMounts:
-          - name: media-data
+          - name: media-config
             mountPath: "/config"
             subPath: "lidarr"
           - name: media-downloads
@@ -58,9 +58,9 @@ spec:
       - name: media-downloads
         persistentVolumeClaim:
           claimName: media-downloads-pvc
-      - name: media-data
+      - name: media-config
         persistentVolumeClaim:
-          claimName: media-data-pvc
+          claimName: media-config-pvc
 ---
 apiVersion: v1
 kind: Service

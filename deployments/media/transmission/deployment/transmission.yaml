@@ -21,9 +21,9 @@ spec:
         - name: media-downloads
           persistentVolumeClaim:
             claimName: media-downloads-pvc
-        - name: media-data
+        - name: media-config
           persistentVolumeClaim:
-            claimName: media-data-pvc
+            claimName: media-config-pvc
         - name: dev-tun
           hostPath:
             path: /dev/net/tun
@@ -88,7 +88,7 @@ spec:
               value: 'true'
           resources: {}
           volumeMounts:
-            - name: media-data
+            - name: media-config
               mountPath: /data
             - name: media-downloads
               mountPath: /downloads/transmission
