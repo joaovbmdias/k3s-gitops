@@ -44,20 +44,20 @@ spec:
         - containerPort: 8096
           protocol: TCP
         volumeMounts:
-        - mountPath: /data/media
+        - mountPath: /media
           name: media-videos
           readOnly: True
         - mountPath: /config
           subPath: "jellyfin"
-          name: media-data
+          name: media-config
       restartPolicy: Always
       volumes:
       - name: media-videos
         persistentVolumeClaim:
           claimName: media-videos-pvc
-      - name: media-data
+      - name: media-config
         persistentVolumeClaim:
-          claimName: media-jellyfin-pvc
+          claimName: media-config-pvc
       nodeName: k8s-master-01
 ---
 apiVersion: v1
