@@ -12,7 +12,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/mnt/nfsshare/Downloads"
+    path: "/mnt/downloads"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
