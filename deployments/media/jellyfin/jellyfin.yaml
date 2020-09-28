@@ -35,8 +35,8 @@ spec:
         name: jellyfin
         resources:
           requests:
-            memory: "1000Mi"
-            cpu: "1500m"
+            memory: "500Mi"
+            cpu: "500m"
           limits:
             memory: "1000Mi"
             cpu: "1500m"
