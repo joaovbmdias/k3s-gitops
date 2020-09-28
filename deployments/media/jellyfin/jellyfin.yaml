@@ -35,11 +35,11 @@ spec:
         name: jellyfin
         resources:
           requests:
-            memory: "500Mi"
-            cpu: "1000m"
+            memory: "750Mi"
+            cpu: "1500m"
           limits:
-            memory: "500Mi"
-            cpu: "1000m"
+            memory: "750Mi"
+            cpu: "1500m"
         ports:
         - containerPort: 8096
           protocol: TCP
