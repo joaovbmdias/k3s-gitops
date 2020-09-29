@@ -35,6 +35,13 @@ spec:
             - name: http
               containerPort: 9091
               protocol: TCP
+          resources:
+            limits:
+              cpu: 500m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
           env:
             - name: OPENVPN_PROVIDER
               value: NORDVPN
