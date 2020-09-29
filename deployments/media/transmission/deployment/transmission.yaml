@@ -61,9 +61,9 @@ spec:
             - name: TRANSMISSION_DOWNLOAD_DIR
               value: /downloads/transmission
             - name: PUID
-              value: '1000'
+              value: '0'
             - name: PGID
-              value: '100'
+              value: '0'
             - name: TRANSMISSION_RPC_PASSWORD
               valueFrom:
                 secretKeyRef:
