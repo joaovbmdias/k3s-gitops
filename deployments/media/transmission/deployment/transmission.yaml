@@ -63,7 +63,7 @@ spec:
             - name: PUID
               value: '1000'
             - name: PGID
-              value: '1000'
+              value: '100'
             - name: TRANSMISSION_RPC_PASSWORD
               valueFrom:
                 secretKeyRef:
