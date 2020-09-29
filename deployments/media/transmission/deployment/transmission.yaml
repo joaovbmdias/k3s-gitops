@@ -92,7 +92,6 @@ spec:
               mountPath: /data
             - name: media-downloads
               mountPath: /downloads/transmission
-              subPath: ""
             - name: dev-tun
               mountPath: /dev/net/tun
           terminationMessagePath: /dev/termination-log
