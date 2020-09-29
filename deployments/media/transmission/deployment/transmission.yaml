@@ -59,7 +59,7 @@ spec:
             - name: TRANSMISSION_PEER_PORT
               value: '47444'
             - name: TRANSMISSION_DOWNLOAD_DIR
-              value: /downloads/transmission
+              value: /downloads
             - name: PUID
               value: '0'
             - name: PGID
@@ -91,7 +91,7 @@ spec:
             - name: media-config
               mountPath: /data
             - name: media-downloads
-              mountPath: /downloads/transmission
+              mountPath: /downloads
             - name: dev-tun
               mountPath: /dev/net/tun
           terminationMessagePath: /dev/termination-log
