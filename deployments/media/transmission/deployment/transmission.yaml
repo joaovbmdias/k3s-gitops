@@ -58,7 +58,7 @@ spec:
             - name: NORDVPN_PROTOCOL
               value: TCP
             - name: NORDVPN_COUNTRY
-              value: NL
+              value: PT
             - name: NORDVPN_CATEGORY
               value: P2P
             - name: LOCAL_NETWORK
@@ -85,8 +85,6 @@ spec:
               value: 'true'
             - name: TRANSMISSION_INCOMPLETE_DIR_ENABLED
               value: 'false'
-            - name: TRANSMISSION_INCOMPLETE_DIR
-              value: /downloads/incomplete
             - name: TRANSMISSION_WATCH_DIR
               value: /downloads/watch
             - name: TRANSMISSION_RATIO_LIMIT
