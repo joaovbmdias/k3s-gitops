@@ -86,6 +86,8 @@ spec:
               value: '0'
             - name: TRANSMISSION_RATIO_LIMIT_ENABLED
               value: 'true'
+            - name: TRANSMISSION_RPC_URL
+              value: ''
           resources: {}
           volumeMounts:
             - name: media-config
