@@ -50,67 +50,66 @@ spec:
               value: 1000
             - name: TZ
               value: Europe/London
-            - name: TRANSMISSION_RPC_PASSWORD
+            - name: PASS
               valueFrom:
                 secretKeyRef:
                   name: transmissionuser
                   key: password
-            - name: TRANSMISSION_RPC_USERNAME
+            - name: USER
               valueFrom:
                 secretKeyRef:
                   name: transmissionuser
                   key: username
-          # env:
-          #   - name: OPENVPN_PROVIDER
-          #     value: NORDVPN
-          #   - name: OPENVPN_USERNAME
-          #     valueFrom:
-          #       secretKeyRef:
-          #         name: openvpn
-          #         key: username
-          #   - name: OPENVPN_PASSWORD
-          #     valueFrom:
-          #       secretKeyRef:
-          #         name: openvpn
-          #         key: password
-          #   - name: NORDVPN_PROTOCOL
-          #     value: TCP
-          #   - name: NORDVPN_COUNTRY
-          #     value: PT
-          #   - name: NORDVPN_CATEGORY
-          #     value: P2P
-          #   - name: LOCAL_NETWORK
-          #     value: 192.168.0.0/24
-          #   - name: TRANSMISSION_PEER_PORT
-          #     value: '47444'
-          #   - name: TRANSMISSION_DOWNLOAD_DIR
-          #     value: /downloads
-          #   - name: PUID
-          #     value: '0'
-          #   - name: PGID
-          #     value: '0'
-          #   - name: TRANSMISSION_RPC_PASSWORD
-          #     valueFrom:
-          #       secretKeyRef:
-          #         name: transmissionuser
-          #         key: password
-          #   - name: TRANSMISSION_RPC_USERNAME
-          #     valueFrom:
-          #       secretKeyRef:
-          #         name: transmissionuser
-          #         key: username
-          #   - name: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED
-          #     value: 'true'
-          #   - name: TRANSMISSION_INCOMPLETE_DIR_ENABLED
-          #     value: 'false'
-          #   - name: TRANSMISSION_WATCH_DIR
-          #     value: /downloads/watch
-          #   - name: TRANSMISSION_RATIO_LIMIT
-          #     value: '0'
-          #   - name: TRANSMISSION_RATIO_LIMIT_ENABLED
-          #     value: 'true'
-          #   - name: TRANSMISSION_RPC_URL
-          #     value: ''
+            # - name: OPENVPN_PROVIDER
+            #   value: NORDVPN
+            # - name: OPENVPN_USERNAME
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: openvpn
+            #       key: username
+            # - name: OPENVPN_PASSWORD
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: openvpn
+            #       key: password
+            # - name: NORDVPN_PROTOCOL
+            #   value: TCP
+            # - name: NORDVPN_COUNTRY
+            #   value: PT
+            # - name: NORDVPN_CATEGORY
+            #   value: P2P
+            # - name: LOCAL_NETWORK
+            #   value: 192.168.0.0/24
+            # - name: TRANSMISSION_PEER_PORT
+            #   value: '47444'
+            # - name: TRANSMISSION_DOWNLOAD_DIR
+            #   value: /downloads
+            # - name: PUID
+            #   value: '0'
+            # - name: PGID
+            #   value: '0'
+            # - name: TRANSMISSION_RPC_PASSWORD
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: transmissionuser
+            #       key: password
+            # - name: TRANSMISSION_RPC_USERNAME
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: transmissionuser
+            #       key: username
+            # - name: TRANSMISSION_RPC_AUTHENTICATION_REQUIRED
+            #   value: 'true'
+            # - name: TRANSMISSION_INCOMPLETE_DIR_ENABLED
+            #   value: 'false'
+            # - name: TRANSMISSION_WATCH_DIR
+            #   value: /downloads/watch
+            # - name: TRANSMISSION_RATIO_LIMIT
+            #   value: '0'
+            # - name: TRANSMISSION_RATIO_LIMIT_ENABLED
+            #   value: 'true'
+            # - name: TRANSMISSION_RPC_URL
+            #   value: ''
           resources: {}
           volumeMounts:
             - name: media-config
