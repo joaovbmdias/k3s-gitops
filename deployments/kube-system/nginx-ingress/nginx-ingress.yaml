@@ -17,7 +17,7 @@ spec:
     version: 1.33.4
   values:
     controller:
-      replicaCount: 2
+      replicaCount: 1
       image:
         repository: quay.io/kubernetes-ingress-controller/nginx-ingress-controller-arm
         tag: 0.30.0
@@ -26,6 +26,8 @@ spec:
         use-proxy-protocol: "false"
         proxy-body-size: "50m"
         use-forwarded-headers: "true"
+        proxy_read_timeout: "3600";
+        #proxy_pass: "http://localhost:5000";
         #
         # @CHANGEME - If you do not use Cloudflare, you can remove the next few lines
         #
