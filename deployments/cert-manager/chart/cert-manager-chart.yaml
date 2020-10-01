@@ -21,9 +21,9 @@ spec:
     extraArgs:
     - --dns01-recursive-nameservers=1.1.1.1:53
     - --dns01-recursive-nameservers-only
-#     # Enabled once prometheus-operator is installed
-#     prometheus:
-#       enabled: true
-#       servicemonitor:
-#         enabled: true
-#         namespace: cert-manager
+    # Enabled once prometheus-operator is installed
+    prometheus:
+      enabled: true
+      servicemonitor:
+        enabled: true
+        namespace: cert-manager
