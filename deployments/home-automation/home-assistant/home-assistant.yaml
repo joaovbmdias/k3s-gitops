@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: home-assistant
+  namespace: home-automation
 spec:
   selector:
     matchLabels:
@@ -51,6 +52,7 @@ metadata:
   labels:
     app: home-assistant
   name: home-assistant
+  namespace: home-automation
 spec:
   ports:
   - name: web
