@@ -42,8 +42,8 @@ spec:
           protocol: TCP
         resources:
           limits:
-            cpu: 250m
-            memory: 256Mi
+            cpu: 150m
+            memory: 210Mi
           requests:
             cpu: 50m
             memory: 190Mi
