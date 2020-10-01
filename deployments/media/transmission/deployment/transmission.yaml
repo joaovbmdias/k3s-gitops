@@ -37,11 +37,11 @@ spec:
               protocol: TCP
           resources:
             limits:
-              cpu: 500m
-              memory: 256Mi
+              cpu: 150m
+              memory: 128Mi
             requests:
               cpu: 100m
-              memory: 128Mi
+              memory: 64Mi
           env:
             - name: OPENVPN_PROVIDER
               value: NORDVPN
@@ -64,7 +64,6 @@ spec:
             - name: LOCAL_NETWORK
               value: 192.168.0.0/24
             - name: NAME_SERVERS
-              value: 192.168.1.201,1.1.1.1,1.0.0.1
             - name: TRANSMISSION_PEER_PORT
               value: '47444'
             - name: TRANSMISSION_DOWNLOAD_DIR

@@ -42,11 +42,11 @@ spec:
           protocol: TCP
         resources:
           limits:
-            cpu: 500m
-            memory: 256Mi
+            cpu: 150m
+            memory: 210Mi
           requests:
-            cpu: 100m
-            memory: 128Mi
+            cpu: 50m
+            memory: 190Mi
         volumeMounts:
           - name: media-config
             mountPath: "/config"
