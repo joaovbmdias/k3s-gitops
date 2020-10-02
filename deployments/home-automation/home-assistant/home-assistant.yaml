@@ -44,7 +44,7 @@ spec:
       volumes:
       - name: configurations
         persistentVolumeClaim:
-          claimName: automation-configurations
+          claimName: home-automation-config-pv
 ---
 apiVersion: v1
 kind: Service
