@@ -113,7 +113,9 @@ spec:
           resources: {}
           volumeMounts:
             - name: media-config
-              mountPath: /data
+              #mountPath: /data
+              mountPath: /config
+              subPath: 'transmission'
             - name: media-downloads
               mountPath: /downloads
             # - name: dev-tun
