@@ -13,7 +13,7 @@ spec:
     - home-automation.192.168.1.100.nip.io
     secretName: "home-automation.192.168.1.100.nip.io-prod-tls"
   rules:
-  - host: "home-automation.192.168.1.100.nip.io"
+  - host: "home-assistant.192.168.1.100.nip.io"
     http:
       paths:
         - backend:
