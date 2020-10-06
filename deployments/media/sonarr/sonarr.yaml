@@ -16,9 +16,9 @@ spec:
       containers:
       - env:
         - name: PUID
-          value: "1000"
+          value: "0"
         - name: PGID
-          value: "1000"
+          value: "0"
         - name: NODE_NAME
           valueFrom:
             fieldRef:
