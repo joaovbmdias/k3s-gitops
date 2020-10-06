@@ -52,11 +52,9 @@ spec:
             mountPath: "/config"
             subPath: "lidarr"
           - name: media-downloads
-            mountPath: "/downloads/transmission"
-            subPath: ""
+            mountPath: "/downloads"
           - name: media-music
             mountPath: "/music"
-            subPath: ""
       restartPolicy: Always
       volumes:
       - name: media-music

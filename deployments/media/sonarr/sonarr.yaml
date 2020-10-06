@@ -52,11 +52,9 @@ spec:
             mountPath: "/config"
             subPath: "sonarr"
           - name: media-downloads
-            mountPath: "/downloads/transmission"
-            subPath: ""
+            mountPath: "/downloads"
           - name: media-videos
             mountPath: "/tv"
-            subPath: ""
       restartPolicy: Always
       volumes:
       - name: media-downloads

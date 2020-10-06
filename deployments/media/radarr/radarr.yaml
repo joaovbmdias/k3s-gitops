@@ -52,11 +52,9 @@ spec:
             mountPath: "/config"
             subPath: "radarr"
           - name: media-downloads
-            mountPath: "/downloads/transmission"
-            subPath: ""
+            mountPath: "/downloads"
           - name: media-videos
             mountPath: "/movies"
-            subPath: ""
       restartPolicy: Always
       volumes:
       - name: media-downloads
