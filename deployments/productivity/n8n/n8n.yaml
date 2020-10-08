@@ -45,7 +45,7 @@ spec:
             memory: 150Mi
         volumeMounts:
           - name: productivity-config
-            mountPath: "~/.n8n"
+            mountPath: "/home/node/.n8n"
             subPath: "n8n"
       restartPolicy: Always
       volumes:
