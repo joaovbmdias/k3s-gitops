@@ -14,7 +14,7 @@ spec:
         app: n8n
     spec:
       containers:
-        env:
+      - env:
         - name: PUID
           value: "0"
         - name: PGID
