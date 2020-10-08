@@ -30,7 +30,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
-        image: docker.io/n8nio/n8n
+        image: docker.io/n8nio/n8n:0.86.1-rpi
         imagePullPolicy: IfNotPresent
         name: n8n
         ports:
