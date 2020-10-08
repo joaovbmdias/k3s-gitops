@@ -14,23 +14,12 @@ spec:
         app: n8n
     spec:
       containers:
-      - env:
-        - name: NODE_NAME
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: spec.nodeName
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: metadata.name
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: metadata.namespace
-        image: docker.io/n8nio/n8n:0.86.1-rpi
+        env:
+        - name: PUID
+          value: "0"
+        - name: PGID
+          value: "0"
+        image: docker.io/n8nio/n8n:latest-rpi
         imagePullPolicy: IfNotPresent
         name: n8n
         ports:
