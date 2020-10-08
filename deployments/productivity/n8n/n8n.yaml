@@ -1,0 +1,70 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n8n
+  namespace: productivity
+spec:
+  selector:
+    matchLabels:
+      app: n8n
+  template:
+    metadata:
+      labels:
+        app: n8n
+    spec:
+      containers:
+      - env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: spec.nodeName
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: docker.io/n8nio/n8n
+        imagePullPolicy: IfNotPresent
+        name: n8n
+        ports:
+        - containerPort: 5678
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+            memory: 300Mi
+          requests:
+            cpu: 50m
+            memory: 150Mi
+        volumeMounts:
+          - name: productivity-config
+            mountPath: "~/.n8n"
+            subPath: "n8n"
+      restartPolicy: Always
+      volumes:
+      - name: productivity-config
+        persistentVolumeClaim:
+          claimName: productivity-config-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: n8n
+  name: n8n
+  namespace: productivity
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 5678
+  selector:
+    app: n8n
+  type: ClusterIP
