@@ -51,7 +51,7 @@ spec:
             - name: PUID
               value: '1000'
             - name: PGID
-              value: '1000'
+              value: '100'
           resources:
             limits:
               cpu: 100m

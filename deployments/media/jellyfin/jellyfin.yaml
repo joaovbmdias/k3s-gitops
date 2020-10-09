@@ -15,21 +15,10 @@ spec:
     spec:
       containers:
       - env:
-        - name: NODE_NAME
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: spec.nodeName
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: metadata.name
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              apiVersion: v1
-              fieldPath: metadata.namespace
+        - name: PUID
+          value: '1000'
+        - name: PGID
+          value: '100'
         image: docker.io/jellyfin/jellyfin
         imagePullPolicy: IfNotPresent
         name: jellyfin
