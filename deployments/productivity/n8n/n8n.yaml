@@ -16,15 +16,23 @@ spec:
       containers:
       - env:
         - name: PUID
-          value: "0"
+          value: '1000'
         - name: PGID
-          value: "0"
+          value: '100'
+        - name: N8N_BASIC_AUTH_ACTIVE
+          value: "true"
+        - name: N8N_BASIC_AUTH_USER
+          value: "n8n"
+        - name: N8N_BASIC_AUTH_PASSWORD
+          value: "n8n"
+        - name: GENERIC_TIMEZONE
+          value: "Europe/Lisbon"
         image: docker.io/n8nio/n8n:latest-rpi
         imagePullPolicy: IfNotPresent
         name: n8n
         ports:
         - containerPort: 5678
-          protocol: TCP
+          #protocol: TCP
         resources:
           limits:
             cpu: 500m
@@ -32,15 +40,15 @@ spec:
           requests:
             cpu: 50m
             memory: 150Mi
-        volumeMounts:
-          - name: productivity-config
-            mountPath: "/home/node/.n8n"
-            subPath: "n8n"
+        # volumeMounts:
+        #   - name: productivity-config
+        #     mountPath: "/home/node/.n8n"
+        #     subPath: "n8n"
       restartPolicy: Always
-      volumes:
-      - name: productivity-config
-        persistentVolumeClaim:
-          claimName: productivity-config-pvc
+      # volumes:
+      # - name: productivity-config
+      #   persistentVolumeClaim:
+      #     claimName: productivity-config-pvc
 ---
 apiVersion: v1
 kind: Service
