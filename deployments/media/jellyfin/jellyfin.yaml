@@ -28,7 +28,6 @@ spec:
             cpu: "500m"
           limits:
             memory: "1000Mi"
-            cpu: "1500m"
         ports:
         - containerPort: 8096
           protocol: TCP
