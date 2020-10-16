@@ -22,6 +22,7 @@ spec:
           hostPath:
             path: /dev/net/tun
             type: ''
+      nodeName: k8s-worker-01
       containers:
         - name: jackett
           image: 'gjeanmart/jackettvpn:arm-latest'

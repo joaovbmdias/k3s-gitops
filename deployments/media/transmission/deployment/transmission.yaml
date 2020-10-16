@@ -28,6 +28,7 @@ spec:
         #   hostPath:
         #     path: /dev/net/tun
         #     type: ''
+      nodeName: k8s-master-02
       containers:
         - name: transmission
           #image: 'haugene/transmission-openvpn:latest-armhf'

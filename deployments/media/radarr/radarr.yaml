@@ -13,6 +13,7 @@ spec:
       labels:
         app: radarr
     spec:
+      nodeName: k8s-worker-01
       containers:
       - env:
         - name: PUID

@@ -13,6 +13,7 @@ spec:
       labels:
         app: sonarr
     spec:
+      nodeName: k8s-worker-02
       containers:
       - env:
         - name: PUID
